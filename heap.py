@@ -12,6 +12,13 @@ class MaxHeap:
         return int(i/2)
     def get_heap_size(self):
         return self.heap_size
+    def remove(self, i):
+        self.heap.pop(i)
+        self.heapify(0)
+    def add(self, to_add):
+        self.heap.append(to_add)
+        self.heapify(0)
+    
     
     def heapify(self, i):
         # print("        From heapify : "+ str(self.heap))
