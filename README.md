@@ -23,7 +23,10 @@ Intitalize with `Heap(A)`, where `A` is the list which needs to be represented a
 ## Function heapsort
 A comparison sort that runs in O(n log n) time. It creates a MaxHeap data structure from the list. It extracts the root and recreates the heap repeatedly. 
 
-Accepts a list, and returns a sorted list. 
+Accepts a list, and returns a sorted list.
+
+#### Simple application function
+The function `isAnagram(s1,s2)`, accepts two strings, uses the function heapsort, and the class MaxHeap to tell if the strings `s1` and `s2` are anagrams. This also runs in O(n log n).
 
 ## Functionality to add:
 * Function as an argument for comparison of elements. 
