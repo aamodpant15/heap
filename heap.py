@@ -13,8 +13,9 @@ class MaxHeap:
     def get_heap_size(self):
         return self.heap_size
     def remove(self, i):
-        self.heap.pop(i)
+        popped = self.heap.pop(i)
         self.heapify(0)
+        return popped
     def add(self, to_add):
         self.heap.append(to_add)
         self.heapify(0)
