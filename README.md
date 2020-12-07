@@ -17,6 +17,8 @@ Intitalize with `Heap(A)`, where `A` is the list which needs to be represented a
 2. `get_right(i)` O(1): Return the right child of the i<sup>th</sup> position in the array `A`.
 3. `get_parent(i)` O(1): Return the parent of the i<sup>th</sup> position in the array `A`.
 4. `get_heap_size()` O(1): Return the size of the heap.
+4. `remove(i)` O(n log n): Remove and return the i<sup>th</sup> element of the heap.
+4. `add(to_add)` O(n log n): Add the element `to_add` at the appropriate position in the heap.
 
 ## Function heapsort
 A comparison sort that runs in O(n log n) time. It creates a MaxHeap data structure from the list. It extracts the root and recreates the heap repeatedly. 
