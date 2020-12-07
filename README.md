@@ -26,5 +26,4 @@ A comparison sort that runs in O(n log n) time. It creates a MaxHeap data struct
 Accepts a list, and returns a sorted list. 
 
 ## Functionality to add:
-* Addition and deletion from heap
 * Function as an argument for comparison of elements. 
