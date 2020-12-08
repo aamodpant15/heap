@@ -8,4 +8,4 @@ def heapsort(A):
         A[0] = temp
         wh.heap_size -= 1
         wh.heapify(0)
-    return ''.join(wh.heap)
+    return wh.heap
