@@ -1,8 +1,9 @@
 class MaxHeap:
-    def __init__(self, A):
+    def __init__(self, A, greater = None):
         self.heap = A
         self.heap_size = len(A)
         self.build_heap()
+        self.greater = greater
 
     def get_left(self, i):
         return (2*i)+1
@@ -27,15 +28,30 @@ class MaxHeap:
         l = self.get_left(i)
         r = self.get_right(i)
         
-        if l < self.get_heap_size() and A[l] > A[i]:
-            # print("        Comparing "+ A[l] + ", "+  A[i])
-            largest = l
-        else:
-            largest = i
+        # Use standard comparison
+        if greater is None:
+            if l < self.get_heap_size() and A[l] > A[i]:
+                # print("        Comparing "+ A[l] + ", "+  A[i])
+                largest = l
+            else:
+                largest = i
 
-        if r < self.get_heap_size() and A[r] > A[largest]:
-            # print("        Comparing "+ A[r] + ", "+  A[largest])
-            largest = r
+            if r < self.get_heap_size() and A[r] > A[largest]:
+                # print("        Comparing "+ A[r] + ", "+  A[largest])
+                largest = r
+
+        # Use user defined function
+        else:
+            if l < self.get_heap_size() and self.greater(A[l],A[i]):
+                # print("        Comparing "+ A[l] + ", "+  A[i])
+                largest = l
+            else:
+                largest = i
+
+            if r < self.get_heap_size() and self.greater(A[r],A[largest]):
+                # print("        Comparing "+ A[r] + ", "+  A[largest])
+                largest = r
+        
         if largest != i:
             # print("        Swapping "+ A[i] + ", "+  A[largest])
             temp = A[i]
