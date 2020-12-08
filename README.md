@@ -14,7 +14,9 @@ For example, if I want to create a heap from a list of tuples, `A = [('a',21),('
 
 > `my_heap = MaxHeap(A, lambda (a,b): a[1] > b[1])`
 
-This lambda function compares the second element of each tuple, and returns True if the first is greater than the second
+This lambda function compares the second element of each tuple, and returns True if the first is greater than the second.
+
+Likewise, one needs to provide this function if while calling the heapsort function as well. Since it needs to pass on the value to MaxHeap class.
 
 ### Class variables
 1. `self.heap`: Store the heap as a list
