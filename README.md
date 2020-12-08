@@ -10,7 +10,7 @@ Intitalize with `MaxHeap(A)`, where `A` is the list which needs to be represente
 
 > `function(a, b) -> returns true if a is greater than b` 
 
-For example, if I want to create a heap from a list of tuples like so, `A = [('a',21),('b',1), ('c',3)]`. And I want to create a heap based on the number in each tuple. I will initialise a MaxHeap object like so: 
+For example, if I want to create a heap from a list of tuples, `A = [('a',21),('b',1), ('c',3)]`. To do this, I will initialise a MaxHeap object like so: 
 
 > `my_heap = MaxHeap(A, lambda (a,b): a[1] > b[1])`
 
