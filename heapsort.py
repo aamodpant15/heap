@@ -1,6 +1,6 @@
 from heap import MaxHeap
 
-def heapsort(A, greater):
+def heapsort(A, greater = None):
     wh = MaxHeap(A, greater)
     for i in range(len(A)-1, 0, -1):
         temp = A[i]
